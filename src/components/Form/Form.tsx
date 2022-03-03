@@ -1,18 +1,20 @@
 import React from "react";
 import { useFormik } from 'formik';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+
+import { requestLogin } from '../../redux/actions/actionCreators';
 
 import { Button, TextField, Typography } from '@mui/material';
 
 function LoginForm() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
       email: '',
       password: '',
     },
     onSubmit: (values) => {
-      console.log(values);
+      dispatch(requestLogin(values));
     },
   });
 
