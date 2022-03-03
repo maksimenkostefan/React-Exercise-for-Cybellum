@@ -19,7 +19,7 @@ function LoginForm() {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form id="login-form" onSubmit={formik.handleSubmit}>
       <Typography
         color="textSecondary"
       >
@@ -46,6 +46,7 @@ function LoginForm() {
         helperText={formik.touched.password && formik.errors.password}
       />
       <Button
+        id="login-button"
         color="primary"
         variant="contained"
         type="submit"
