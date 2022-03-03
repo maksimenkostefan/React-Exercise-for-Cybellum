@@ -5,13 +5,11 @@ import {
 interface userState {
   loginInfo: {},
   pending: Boolean,
-  // error: {},
 }
 
 const initialState: userState = {
   loginInfo: {},
   pending: false,
-  // error: null,
 };
 
 const userReducer = (state = initialState, action: { type: string, payload?: {email: string, password: string}}) => {
@@ -26,14 +24,12 @@ const userReducer = (state = initialState, action: { type: string, payload?: {em
         ...state,
         pending: false,
         loginInfo: action.payload,
-        // error: null,
       };
     case LOGIN_DECLINED:
       return {
         ...state,
         pending: false,
         loginInfo: {},
-        // error: action.payload.error,
       };
     default:
       return {
