@@ -1,15 +1,21 @@
 import React from "react";
 
-import { TextField as BaseTextField } from '@mui/material';
+import { TextField as BaseTextField, Typography } from '@mui/material';
 
 type Props = {
-  label: string;
   type: string;
+  label: string
 };
 
-function TextField({ label, type }: Props) {
+function TextField({ type, label }: Props) {
   return (
-    <BaseTextField label={label} type={type} variant="outlined" />
+    <>
+      <Typography
+      >
+        {label}
+      </Typography>
+      <BaseTextField type={type} variant="outlined" />
+    </>
   );
 }
 

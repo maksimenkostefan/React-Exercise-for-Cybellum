@@ -6,8 +6,8 @@ import Button from '../../components/Button';
 function LoginPage() {
   return (
     <>
-      <TextField label={'Email'} type={'text'} />
-      <TextField label={'Password'} type={'password'} />
+      <TextField type={'text'} label='Email' />
+      <TextField type={'password'} label='Password' />
       <Button name='Login' />
     </>
   );
