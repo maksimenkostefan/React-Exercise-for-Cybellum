@@ -3,9 +3,9 @@ import { combineReducers } from "redux";
 import userReducer from '../reducers/userReducer';
 
 const rootReducer = combineReducers({
-  todo: userReducer,
+  user: userReducer,
 });
 
-export type AppState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof rootReducer>;
 
 export default rootReducer;
