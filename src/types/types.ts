@@ -19,7 +19,6 @@ export interface ITextProps {
 }
 
 export interface IUserState {
-  loginInfo: {},
   pending: Boolean,
   isLoggedIn: Boolean
 }

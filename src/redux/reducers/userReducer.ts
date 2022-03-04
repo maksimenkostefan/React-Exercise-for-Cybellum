@@ -5,7 +5,6 @@ import type { IActionType } from '../../types/types';
 import { IUserState } from "../../types/types";
 
 const initialState: IUserState = {
-  loginInfo: {},
   pending: false,
   isLoggedIn: false
 };
@@ -22,7 +21,6 @@ const userReducer = (state = initialState, action: IActionType) => {
       return {
         ...state,
         pending: false,
-        loginInfo: action.payload,
         isLoggedIn: true
       };
     case LOGIN_DECLINED:
@@ -30,7 +28,6 @@ const userReducer = (state = initialState, action: IActionType) => {
         ...state,
         pending: false,
         isLoggedIn: false,
-        loginInfo: {},
       };
     default:
       return {
