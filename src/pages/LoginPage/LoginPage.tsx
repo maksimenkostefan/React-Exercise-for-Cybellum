@@ -13,7 +13,7 @@ function LoginPage() {
 
   useEffect(() => {
     const userInfo = document.cookie.split('; ').find(row => row.startsWith('access_token='))?.split('=')[1];
-    if (userInfo) dispatch(approveLogin(userInfo));
+    if (userInfo) dispatch(approveLogin());
   }, [dispatch]);
 
   return (
